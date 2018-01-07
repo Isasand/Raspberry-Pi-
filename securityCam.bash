@@ -13,6 +13,6 @@ if [[ "$answer" == *"differ"* ]]; then
         echo `date` > date.txt
         rm newpic.jpg
         convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% differImage.jpg differImage.jpg
-        python sendToS3.py
+        python sendToAWSS3.py
 fi
 
